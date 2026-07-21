@@ -1,6 +1,6 @@
 # To-Do List - Task Management Application
 
-[🇮🇷 نسخه فارسی](README.md)
+[🇮🇷 نسخه فارسی](README.md) | [🇩🇪 Deutsche Version](README_DE.md)
 
 ---
 
@@ -58,7 +58,8 @@ todo-list/
 ├── main.py              # Main application file
 ├── tasks.csv            # Task storage file (auto-created)
 ├── README.md            # Persian documentation
-└── README_EN.md         # English documentation
+├── README_EN.md         # English documentation
+└── README_DE.md         # German documentation
 ```
 
 ---
@@ -123,6 +124,7 @@ mylist.save_to_csv()
 ## 🔗 Links
 
 - [Persian Version](README.md)
+- [German Version](README_DE.md)
 - [Repository](https://github.com/Amirrezaghanaatiyan/todo-list)
 
 ---
