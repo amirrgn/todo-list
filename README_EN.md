@@ -120,12 +120,6 @@ mylist.save_to_csv()
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 🔗 Links
 
 - [Persian Version](README.md)
