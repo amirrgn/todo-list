@@ -21,11 +21,12 @@ class TODoList:
     def remove_task(self, name):
         for task in self.tasks:
             if task.name == name:
-                self.tasks.remove(task)
-                print("تسک حذف شد.")
-                return
+            def remove_task(self, name):
+                self.tasks = [task for task in self.tasks if task.name != name]
+    print("تسک حذف شد.")
+        
 
-        print("تسکی با این نام پیدا نشد.")
+    print("تسکی با این نام پیدا نشد.")
 
     def get_tasks(self):
         return self.tasks
