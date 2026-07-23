@@ -27,6 +27,12 @@ class TODoList:
         else:
             for task in self.tasks:
                 print(task)
+    def mark_task_done(self, name):
+        for task in self.tasks:
+            if task.name == name:
+                task.status = "انجام شده"
+                return
+        print("تسک پیدا نشد.")
 
     def save_to_csv(self, filename="tasks.csv"):
         with open(filename, "w", newline="", encoding="utf-8") as file:
@@ -58,8 +64,9 @@ def main():
         print("1. افزودن تسک")
         print("2. حذف تسک")
         print("3. مشاهده همه")
-        print("4. ذخیره")
-        print("5. خروج")
+        print("4. تغییر وضعیت تسک")
+        print("5. ذخیره")
+        print("6. خروج")
 
         choose = input("انتخاب: ")
 
@@ -79,11 +86,20 @@ def main():
             mylist.display_tasks()
 
         elif choose == "4":
-            mylist.save_to_csv()
+            name = input("نام تسک: ")
+            sure = input("ایا مطمین هستید میخواهید این تسک را پاک کنید ؟(y/n)")
+            if sure == "y":
+                mylist.mark_task_done(name)
+            else:
+                print("وضعیت تغییر نکرد/n" \
+                "گذینه دیگری انتخاب کنید")
+                return
+        
 
         elif choose == "5":
             mylist.save_to_csv()
             break
+        # elif
 
         else:
             print("گزینه نامعتبر.")
