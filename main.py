@@ -6,9 +6,10 @@ class Task:
         self.description = description
         self.priority = priority
         self.status = "انجام نشده"
+        self.deadline = None
 
     def __str__(self):
-        return f"کار: {self.name} | توضیحات: {self.description} | اولویت: {self.priority} | وضعیت: {self.status}"
+        return f"کار: {self.name} | توضیحات: {self.description} | اولویت: {self.priority} | وضعیت: {self.status} | مهلت: {self.deadline}"
 
 class TODoList:
     def __init__(self):
@@ -27,6 +28,7 @@ class TODoList:
         else:
             for task in self.tasks:
                 print(task)
+
     def mark_task_done(self, name):
         for task in self.tasks:
             if task.name == name:
@@ -37,9 +39,9 @@ class TODoList:
     def save_to_csv(self, filename="tasks.csv"):
         with open(filename, "w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerow(["Name", "Description", "Priority", "Status"])
+            writer.writerow(["Name", "Description", "Priority", "Status", "Deadline"])
             for task in self.tasks:
-                writer.writerow([task.name, task.description, task.priority, task.status])
+                writer.writerow([task.name, task.description, task.priority, task.status, task.deadline])
         print("ذخیره شد.")
 
     def load_from_csv(self, filename="tasks.csv"):
@@ -50,6 +52,7 @@ class TODoList:
                 for row in reader:
                     task = Task(row["Name"], row["Description"], row["Priority"])
                     task.status = row["Status"]
+                    task.deadline = row["Deadline"]
                     self.tasks.append(task)
             print("بارگذاری شد.")
         except FileNotFoundError:
@@ -74,7 +77,9 @@ def main():
             name = input("نام: ")
             description = input("توضیحات: ")
             priority = input("اولویت (بالا/متوسط/پایین): ")
+            deadline = input("مهلت (مثال: 2025-01-15): ")
             task = Task(name, description, priority)
+            task.deadline = deadline
             mylist.add_task(task)
             print("✅ اضافه شد.")
 
@@ -87,19 +92,15 @@ def main():
 
         elif choose == "4":
             name = input("نام تسک: ")
-            sure = input("ایا مطمین هستید میخواهید این تسک را پاک کنید ؟(y/n)")
+            sure = input("آیا مطمئن هستید؟ (y/n): ")
             if sure == "y":
                 mylist.mark_task_done(name)
             else:
-                print("وضعیت تغییر نکرد/n" \
-                "گذینه دیگری انتخاب کنید")
-                return
-        
+                print("وضعیت تغییر نکرد.")
 
         elif choose == "5":
             mylist.save_to_csv()
             break
-        # elif
 
         else:
             print("گزینه نامعتبر.")
