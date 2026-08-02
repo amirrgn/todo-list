@@ -15,6 +15,8 @@ A Python-based to-do list application for managing daily tasks with CSV data per
 - ✅ **Add Tasks**: Create new tasks with name, description, and priority level
 - ✅ **Remove Tasks**: Delete tasks by name
 - ✅ **View Tasks**: Display all tasks in the list
+- ✅ **Set Deadline**: Assign deadline dates to tasks
+- ✅ **Mark as Done**: Change task status (Completed/Not Completed)
 - ✅ **Auto-Save**: Automatically save tasks to CSV file
 - ✅ **Auto-Load**: Load previously saved tasks when starting the application
 - ✅ **Priority Levels**: Set priority for each task (High/Medium/Low)
@@ -30,7 +32,7 @@ A Python-based to-do list application for managing daily tasks with CSV data per
 
 1. **Clone the Repository**:
 ```bash
-git clone https://github.com/Amirrezaghanaatiyan/todo-list.git
+git clone https://github.com/amirrgn/todo-list.git
 cd todo-list
 ```
 
@@ -45,8 +47,9 @@ python main.py
 1. Add Task
 2. Remove Task
 3. View All
-4. Save to CSV
-5. Exit
+4. Mark Task as Done
+5. Save
+6. Exit
 ```
 
 ---
@@ -71,12 +74,15 @@ Represents a single task with properties:
 - `name`: Task name
 - `description`: Task description
 - `priority`: Priority level
+- `status`: Task status (Completed/Not Completed)
+- `deadline`: Deadline date
 
 ### `TODoList` Class
 Manages the task list with methods:
 - `add_task(task)`: Add a new task
 - `remove_task(name)`: Remove a task by name
 - `display_tasks()`: Show all tasks
+- `mark_task_done(name)`: Change task status
 - `save_to_csv()`: Save tasks to CSV file
 - `load_from_csv()`: Load tasks from CSV file
 
@@ -93,10 +99,14 @@ mylist.load_from_csv()
 
 # Add a new task
 task = Task("Buy groceries", "For breakfast", "High")
+task.deadline = "2025-01-15"
 mylist.add_task(task)
 
 # Display all tasks
 mylist.display_tasks()
+
+# Mark task as done
+mylist.mark_task_done("Buy groceries")
 
 # Save tasks
 mylist.save_to_csv()
@@ -106,18 +116,18 @@ mylist.save_to_csv()
 
 ## 🎯 Future Enhancements
 
-- [ ] Add deadline dates
-- [ ] Add task completion status (Done/Not Done)
 - [ ] Implement GUI interface
 - [ ] Migrate to database (SQLite)
 - [ ] Add advanced search and filter options
+- [ ] Add reminder notifications
+- [ ] Export to Excel
 
 ---
 
 ## 👤 Author
 
 **Amirreza Ghanaatiyan**
-- GitHub: [@Amirrezaghanaatiyan](https://github.com/Amirrezaghanaatiyan)
+- GitHub: [@amirrgn](https://github.com/amirrgn)
 
 ---
 
@@ -125,7 +135,7 @@ mylist.save_to_csv()
 
 - [Persian Version](README.md)
 - [German Version](README_DE.md)
-- [Repository](https://github.com/Amirrezaghanaatiyan/todo-list)
+- [Repository](https://github.com/amirrgn/todo-list)
 
 ---
 
