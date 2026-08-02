@@ -30,7 +30,7 @@
 
 1. **کلون کردن Repository**:
 ```bash
-git clone https://github.com/Amirrezaghanaatiyan/todo-list.git
+git clone https://github.com/amirrgn/todo-list.git
 cd todo-list
 ```
 
