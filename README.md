@@ -1,142 +1,142 @@
-# To-Do List - برنامه مدیریت کارها
+# To-Do List - Task Management Application
 
-[🇬🇧 English Version](README_EN.md) | [🇩🇪 Deutsch Version](README_DE.md)
-
----
-
-## 📋 توضیح پروژه
-
-برنامه مدیریت کارهای روزمره به زبان Python با قابلیت ذخیره‌سازی داده‌ها در فایل CSV. این برنامه با رابط خط فرمان (CLI) کار می‌کند و از اصول برنامه‌نویسی شی‌گرا (OOP) استفاده می‌کند.
+[🇮🇷 نسخه فارسی](README_FA.md) | [🇩🇪 Deutsche Version](README_DE.md)
 
 ---
 
-## ✨ ویژگی‌ها
+## 📋 Project Description
 
-- ✅ **افزودن کار**: اضافه کردن کارهای جدید با نام، توضیحات و سطح اولویت
-- ✅ **حذف کار**: حذف کارها بر اساس نام
-- ✅ **مشاهده کارها**: نمایش تمام کارهای موجود در لیست
-- ✅ **تعیین مهلت**: تعیین تاریخ مهلت برای هر کار
-- ✅ **تغییر وضعیت**: تغییر وضعیت کار (انجام شده/انجام نشده)
-- ✅ **ذخیره‌سازی**: ذخیره خودکار کارها در فایل CSV
-- ✅ **بارگذاری**: بارگذاری خودکار کارهای ذخیره‌شده هنگام شروع برنامه
-- ✅ **اولویت‌بندی**: تعیین سطح اولویت برای هر کار (بالا/متوسط/پایین)
+A Python-based to-do list application for managing daily tasks with CSV data persistence. This command-line application follows Object-Oriented Programming (OOP) principles and provides an intuitive interface for task management.
 
 ---
 
-## 🛠 نحوه نصب و استفاده
+## ✨ Features
 
-### پیش‌نیازها
-- Python 3.6 یا بالاتر
+- ✅ **Add Tasks**: Create new tasks with name, description, and priority level
+- ✅ **Remove Tasks**: Delete tasks by name
+- ✅ **View Tasks**: Display all tasks in the list
+- ✅ **Set Deadline**: Assign deadline dates to tasks
+- ✅ **Mark as Done**: Change task status (Completed/Not Completed)
+- ✅ **Auto-Save**: Automatically save tasks to CSV file
+- ✅ **Auto-Load**: Load previously saved tasks when starting the application
+- ✅ **Priority Levels**: Set priority for each task (High/Medium/Low)
 
-### مراحل اجرا
+---
 
-1. **کلون کردن Repository**:
+## 🛠 Installation & Usage
+
+### Prerequisites
+- Python 3.6 or higher
+
+### Getting Started
+
+1. **Clone the Repository**:
 ```bash
 git clone https://github.com/amirrgn/todo-list.git
 cd todo-list
 ```
 
-2. **اجرای برنامه**:
+2. **Run the Application**:
 ```bash
 python main.py
 ```
 
-3. **استفاده از منو**:
+3. **Use the Menu**:
 ```
 ===== TO DO LIST =====
-1. افزودن تسک
-2. حذف تسک
-3. مشاهده همه
-4. تغییر وضعیت تسک
-5. ذخیره
-6. خروج
+1. Add Task
+2. Remove Task
+3. View All
+4. Mark Task as Done
+5. Save
+6. Exit
 ```
 
 ---
 
-## 📁 ساختار پروژه
+## 📁 Project Structure
 
 ```
 todo-list/
-├── main.py              # فایل اصلی برنامه
-├── tasks.csv            # فایل ذخیره کارها (خودکار ساخته می‌شود)
-├── README.md            # توضیحات فارسی
-├── README_EN.md         # توضیحات انگلیسی
-└── README_DE.md         # توضیحات آلمانی
+├── main.py              # Main application file
+├── tasks.csv            # Task storage file (auto-created)
+├── README.md            # English documentation
+├── README_FA.md         # Persian documentation
+└── README_DE.md         # German documentation
 ```
 
 ---
 
-## 🏗 معماری کد
+## 🏗 Code Architecture
 
-### کلاس `Task`
-نمایندگی یک کار با خصوصیات:
-- `name`: نام کار
-- `description`: توضیحات کار
-- `priority`: سطح اولویت
-- `status`: وضعیت کار (انجام شده/انجام نشده)
-- `deadline`: تاریخ مهلت
+### `Task` Class
+Represents a single task with properties:
+- `name`: Task name
+- `description`: Task description
+- `priority`: Priority level
+- `status`: Task status (Completed/Not Completed)
+- `deadline`: Deadline date
 
-### کلاس `TODoList`
-مدیریت لیست کارها با متودهای:
-- `add_task(task)`: اضافه کردن کار
-- `remove_task(name)`: حذف کار
-- `display_tasks()`: نمایش تمام کارها
-- `mark_task_done(name)`: تغییر وضعیت کار
-- `save_to_csv()`: ذخیره در فایل CSV
-- `load_from_csv()`: بارگذاری از فایل CSV
+### `TODoList` Class
+Manages the task list with methods:
+- `add_task(task)`: Add a new task
+- `remove_task(name)`: Remove a task by name
+- `display_tasks()`: Show all tasks
+- `mark_task_done(name)`: Change task status
+- `save_to_csv()`: Save tasks to CSV file
+- `load_from_csv()`: Load tasks from CSV file
 
 ---
 
-## 📝 مثال استفاده
+## 📝 Usage Example
 
 ```python
-# ایجاد لیست
+# Create a to-do list
 mylist = TODoList()
 
-# بارگذاری کارهای قدیمی
+# Load previously saved tasks
 mylist.load_from_csv()
 
-# اضافه کردن کار جدید
-task = Task("خرید میوه", "برای صبحانه", "بالا")
+# Add a new task
+task = Task("Buy groceries", "For breakfast", "High")
 task.deadline = "2025-01-15"
 mylist.add_task(task)
 
-# نمایش کارها
+# Display all tasks
 mylist.display_tasks()
 
-# تغییر وضعیت کار
-mylist.mark_task_done("خرید میوه")
+# Mark task as done
+mylist.mark_task_done("Buy groceries")
 
-# ذخیره کارها
+# Save tasks
 mylist.save_to_csv()
 ```
 
 ---
 
-## 🎯 هدف‌های آینده
+## 🎯 Future Enhancements
 
-- [ ] رابط گرافیکی (GUI)
-- [ ] Database به جای CSV
-- [ ] سرچ و فیلتر پیشرفته
-- [ ] اعلان‌های یادآوری
-- [ ] صادرات به Excel
+- [ ] Implement GUI interface
+- [ ] Migrate to database (SQLite)
+- [ ] Add advanced search and filter options
+- [ ] Add reminder notifications
+- [ ] Export to Excel
 
 ---
 
-## 👤 نویسنده
+## 👤 Author
 
 **Amirreza Ghanaatiyan**
 - GitHub: [@amirrgn](https://github.com/amirrgn)
 
 ---
 
-## 🔗 پیوندها
+## 🔗 Links
 
-- [صفحه انگلیسی](README_EN.md)
-- [صفحه آلمانی](README_DE.md)
+- [Persian Version](README_FA.md)
+- [German Version](README_DE.md)
 - [Repository](https://github.com/amirrgn/todo-list)
 
 ---
 
-**ساخته‌شده با ❤️ توسط Amirreza Ghanaatiyan**
+**Built with ❤️ by Amirreza Ghanaatiyan**
