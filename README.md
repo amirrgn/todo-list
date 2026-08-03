@@ -131,10 +131,35 @@ mylist.save_to_csv()
 
 ---
 
+## ⚖️ License Attribution
+
+This project is licensed under the **MIT License**. 
+
+If you use this code, you **MUST** include:
+- ✅ Original author name: **Amirreza Ghanaatiyan**
+- ✅ Link to original repository: [https://github.com/amirrgn/todo-list](https://github.com/amirrgn/todo-list)
+- ✅ Copy of the LICENSE file
+- ✅ Clear attribution stating this code is based on Amirreza Ghanaatiyan's work
+
+### Example Attribution:
+```
+This project is based on the To-Do List application by Amirreza Ghanaatiyan
+(https://github.com/amirrgn/todo-list)
+Licensed under MIT License
+```
+
+### Important Notice:
+**Violation of the attribution requirement (using this code without proper credit) may result in legal action.**
+
+For the full license terms, see the [LICENSE](LICENSE) file.
+
+---
+
 ## 🔗 Links
 
 - [Persian Version](README_FA.md)
 - [German Version](README_DE.md)
+- [License](LICENSE)
 - [Repository](https://github.com/amirrgn/todo-list)
 
 ---
