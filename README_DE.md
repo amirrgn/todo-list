@@ -1,12 +1,12 @@
 # To-Do List - Aufgabenverwaltungsanwendung
 
-[🇮🇷 نسخه فارسی](README.md) | [🇬🇧 English Version](README_EN.md)
+[🇮🇷 نسخه فارسی](README_FA.md) | [🇬🇧 English Version](README.md)
 
 ---
 
 ## 📋 Projektbeschreibung
 
-Eine Python-basierte To-Do-Listen-Anwendung zur Verwaltung täglicher Aufgaben mit CSV-Datenspeicherung. Diese Befehlszeilenschnittstellen-Anwendung folgt den Prinzipien der objektorientierten Programmierung (OOP) und bietet eine intuitive Schnittstelle für die Aufgabenverwaltung.
+Eine Python-basierte To-Do-Listen-Anwendung zur Verwaltung täglicher Aufgaben mit CSV-Datenspeicherung. Diese Befehlszeilenschnittstellen-Anwendung folgt den Prinzipien der objektorientierten Programmierung (OOP) und bietet eine intuitive Schnittstelle zur Aufgabenverwaltung.
 
 ---
 
@@ -60,8 +60,8 @@ python main.py
 todo-list/
 ├── main.py              # Hauptanwendungsdatei
 ├── tasks.csv            # Aufgabenspeicherdatei (wird automatisch erstellt)
-├── README.md            # Persische Dokumentation
-├── README_EN.md         # Englische Dokumentation
+├── README.md            # Englische Dokumentation
+├── README_FA.md         # Persische Dokumentation
 └── README_DE.md         # Deutsche Dokumentation
 ```
 
@@ -131,10 +131,35 @@ mylist.save_to_csv()
 
 ---
 
+## ⚖️ Lizenzangaben und Zuschreibung
+
+Dieses Projekt wird unter der **MIT-Lizenz** veröffentlicht.
+
+Wenn Sie diesen Code verwenden, **müssen Sie** Folgendes einbeziehen:
+- ✅ Name des ursprünglichen Autors: **Amirreza Ghanaatiyan**
+- ✅ Link zum ursprünglichen Repository: [https://github.com/amirrgn/todo-list](https://github.com/amirrgn/todo-list)
+- ✅ Kopie der LICENSE-Datei
+- ✅ Klare Angabe, dass dieser Code auf der Arbeit von Amirreza Ghanaatiyan basiert
+
+### Beispiel einer korrekten Zuschreibung:
+```
+Dieses Projekt basiert auf der To-Do-List-Anwendung von Amirreza Ghanaatiyan
+(https://github.com/amirrgn/todo-list)
+Veröffentlicht unter der MIT-Lizenz
+```
+
+### Wichtiger Hinweis:
+**Die Nichtbeachtung der Zuschreibungsanforderung (Verwendung dieses Codes ohne angemessene Gutschrift) kann zu rechtlichen Maßnahmen führen.**
+
+Die vollständigen Lizenzbedingungen finden Sie in der Datei [LICENSE](LICENSE).
+
+---
+
 ## 🔗 Links
 
-- [Persische Version](README.md)
-- [Englische Version](README_EN.md)
+- [Persische Version](README_FA.md)
+- [Englische Version](README.md)
+- [Lizenz](LICENSE)
 - [Repository](https://github.com/amirrgn/todo-list)
 
 ---
